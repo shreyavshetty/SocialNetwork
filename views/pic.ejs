@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ <title>Dashboard</title>
+ <style>
+ html {
+  height: 100%;
+
+  background:linear-gradient(rgba(250,133,0,0.6),rgba(243,255,15, 0.6));
+ }
+ input[type=file]
+{
+    background-color:;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    border: 5px solid black;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input[type=submit]
+{
+    background-color: #ff6666;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+div.main
+{
+	background-color: #ff5050;
+	width: 300px;
+    height: 300px;
+    border: 15px solid black;
+    padding: 50px;
+    margin: 50px;
+
+}
+</style>
+</head>
+<body>
+  <h1> Here are all of <%=user %>'s pictures </h1>
+  <div>
+  <% for (var i=0;i<len;i++) { %>
+  <img src="data:image/gif;base64,<%=imagedata[i]%>" width="269" height="269"><br><br>
+  <% } %>
+</div>
+</body>
+</html>

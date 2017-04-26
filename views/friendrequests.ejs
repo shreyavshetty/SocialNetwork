@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Users</title>
+  <link rel="stylesheet" type="text/css" href="sign.css">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Basic|Fjalla+One|Fredoka+One|Fruktur|Rock+Salt|Voltaire" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Basic|Cantarell|Fjalla+One|Fredoka+One|Fruktur|Rock+Salt|Voltaire" rel="stylesheet">
+
+</head>
+<body>
+  <h1><%= uname %> , Here are all your Friend requests </h1>
+  <div>
+  <ul class="User">
+    <% member.forEach(function (topC) { if(topC.from){ %>
+    <li class="User">
+
+      <span><%= topC.from %></span>
+      <br>
+      <span>
+      <button class="button1" onclick="location.href='/acceptrequest/<%=topC.from%>'" value="AcceptRequest">Accept Request</button>
+                    </span>
+    </li>
+  <% }}); %>
+
+  </ul>
+</div>
+
+
+
+</body>
+</html>
